@@ -1,11 +1,12 @@
 # coding-test
 
 Prep for coding tests in Python.  
-Goal is to solve the question of the day for both sites.  
+Goal is to solve the question of the day for Leetcode.
+Solve Baekjoon problems for additional practice.
 
-## Programmers
+## Baekjoon
 
-<https://school.programmers.co.kr/learn/challenges?order=recent&page=1&languages=python3>
+<https://solved.ac/problems/level>
 
 ## Leetcode
 
