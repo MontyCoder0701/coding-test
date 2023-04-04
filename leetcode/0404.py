@@ -1,1 +1,4 @@
-# 추억 점수
+# 2405. Optimal Partition of String
+
+class Solution:
+    def partitionString(self, s: str) -> int:

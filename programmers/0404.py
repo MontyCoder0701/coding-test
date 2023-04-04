@@ -1,1 +1,1 @@
-# 2405. Optimal Partition of String
+# 추억점수
