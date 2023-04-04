@@ -1,7 +1,10 @@
-count = int(input())
+import sys
+input = sys.stdin.readline
+
 numbers = []
 
-for i in range(count):
+for i in range(int(input())):
     numbers.append(int(input()))
 
-print(sorted(numbers))
+for i in sorted(numbers):
+    print(i)
