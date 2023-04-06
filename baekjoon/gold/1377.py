@@ -1,7 +1,7 @@
 import sys
 N = int(sys.stdin.readline())
 A = [0] + [int(sys.stdin.readline())
-           for _ in range(N)]  # 0 is added for convenience
+           for _ in range(N)] + [1000000]  # 0 is added for convenience
 
 changed = False
 for i in range(1, N+2):  # N+2 is the last index to be compared
