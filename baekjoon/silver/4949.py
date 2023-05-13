@@ -4,32 +4,26 @@ input = sys.stdin.readline
 stack = []
 
 while True:
-    line = input()
-
-    if len(line) == 1:
-        if line.strip() == ".":
-            exit()
-
-    for letter in line:
-        if letter == '[' or letter == '(':
-            stack.append(letter)
-        if len(stack)>0 and stack[-1] == '[':
-            if letter == ']':
-                try:
-                    stack.pop()
-                except:
-                    pass
-        if len(stack)>0 and stack[-1] == '(':
-            if letter == ')':
-                try:
-                    stack.pop()
-                except:
-                    pass
-
-    if len(stack) == 0:
-        print("yes")
+    string = input().rstrip() # rstrip() : 오른쪽 공백 제거
+    if string == '.': # 종료 조건
+        break # while문 종료
+    for char in string:
+        if char == '(' or char == '[':
+            stack.append(char)
+        elif char == ')':
+            if stack and stack[-1] == '(':
+                stack.pop()
+            else:
+                stack.append(char)
+                break
+        elif char == ']':
+            if stack and stack[-1] == '[':
+                stack.pop()
+            else:
+                stack.append(char)
+                break
+    if stack:
+        print('no')
     else:
-        print("no")
-
-    stack = []
-
+        print('yes')
+    stack.clear() # 스택 초기화
